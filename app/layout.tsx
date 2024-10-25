@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-import { Inter } from '@next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google'
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
@@ -10,7 +10,10 @@ import Footer from "@/components/footer";
 
 
 const inter = Inter({ subsets: ['latin'] });
-
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-serif'
+})
 
 
 export const metadata: Metadata = {
@@ -28,7 +31,8 @@ export default function RootLayout({
       <body
         className={cn(
           'flex min-h-screen flex-col antialiased',
-          inter.className
+          inter.className,
+          playfair.variable
         )}
       >
         <ThemeProvider
