@@ -15,8 +15,11 @@ export default function PostsPage({ params }: PostsProps) {
 
 
   return (
-    <div>
-      PostsPage
-    </div>
+    <section className='pb-24 pt-40'>
+      <div className='container max-w-3xl'>
+        <h1 className='title mb-12'>Posts</h1>
+
+      </div>
+    </section>
   );
 }
