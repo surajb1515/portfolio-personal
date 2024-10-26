@@ -14,17 +14,12 @@ import { notFound } from "next/navigation";
 export default async function PostPageSlug({ params }: { params: { slug: string } }) {
 
   const { slug } = params
-  console.log('SLUGGGGGG-------> :', slug)
   const post = await getPostBySlug(slug)
 
   if (!post) {
-    console.log("NOT FOUNDDDDDDDDDDDDDDDD------->")
     notFound();
   }
 
-  if (post) {
-    console.log("YESSSSSSSS POSTTTTTTTTTTTTTT")
-  }
   // if there is a post 
   const { metadata, content } = post
   const { title, image, author, publishedAt } = metadata
