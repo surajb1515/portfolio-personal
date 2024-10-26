@@ -1,3 +1,4 @@
+import MDXContent from "@/components/mdx-content";
 import { getPostBySlug } from "@/lib/posts";
 import { formatDate } from "@/lib/utils";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
@@ -8,7 +9,13 @@ import { notFound } from "next/navigation";
 
 
 
-
+const components = {
+  h2: (props: any) => (
+    <h2 {...props} className="text-red-500">
+      {props.children}
+    </h2>
+  )
+}
 
 
 export default async function PostPageSlug({ params }: { params: { slug: string } }) {
@@ -59,7 +66,7 @@ export default async function PostPageSlug({ params }: { params: { slug: string 
         </header>
 
         <main className='prose mt-16 dark:prose-invert'>
-          <MDXRemote source={content} />
+          <MDXContent source={content} />
         </main>
 
         {/* <footer className='mt-16'>
