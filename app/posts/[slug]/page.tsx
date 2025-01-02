@@ -2,7 +2,6 @@ import MDXContent from "@/components/mdx-content";
 import { getPostBySlug } from "@/lib/posts";
 import { formatDate } from "@/lib/utils";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -18,7 +17,15 @@ const components = {
 }
 
 
-export default async function PostPageSlug({ params }: { params: { slug: string } }) {
+
+export default async function PostPageSlug({
+  params
+}: {
+  params: {
+    slug: string
+  }
+}) {
+
 
   const { slug } = params
   const post = await getPostBySlug(slug)

@@ -3,6 +3,8 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 
+
+
 export default function Home() {
 
   const content = `

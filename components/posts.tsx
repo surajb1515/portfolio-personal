@@ -1,12 +1,19 @@
-import Link from 'next/link'
-
 import { PostMetadata } from '@/lib/posts'
 import { formatDate } from '@/lib/utils'
+import Link from 'next/link'
+
+
 
 
 
 // it will take array of posts
-export default function Posts({ posts }: { posts: PostMetadata[] }) {
+export default function Posts({
+  posts
+}: {
+  posts: PostMetadata[]
+}) {
+
+
   return (
     <ul className='flex flex-col gap-8'>
       {posts.map(post => (
