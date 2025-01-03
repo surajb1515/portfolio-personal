@@ -23,7 +23,7 @@ export default function ProjectsComponent({
   return (
     <ul className='grid grid-cols-1 gap-8 sm:grid-cols-2'>
 
-      {projects?.map(project => (
+      {projects.map(project => (
         <li key={project.slug} className='group relative'>
           <Link href={`/projects/${project.slug}`}>
             {project.image && (
