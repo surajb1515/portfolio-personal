@@ -16,7 +16,7 @@ export default function Intro() {
         <Image
           className='flex-1 rounded-lg grayscale'
           src={authorImage}
-          alt='Hamed Bahram'
+          alt='Suraj Bhardwaj'
           width={175}
           height={175}
           priority

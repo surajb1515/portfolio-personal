@@ -23,6 +23,7 @@ export type PostMetadata = {
 const rootDirectory = path.join(process.cwd(), 'content', 'posts')
 
 
+
 export async function getPostBySlug(slug: string): Promise<Post | null> {
   try {
     const filePath = path.join(rootDirectory, `${slug}.mdx`)
@@ -30,12 +31,17 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 
 
     // for the front matter we will use another npm-package -> gray-matter
-
     // matter() is from gray-matter package to render front-matter
     const { data, content } = matter(fileContent)
 
+    const post: Post = {
+      metadata: { ...data, slug },
+      content
+    }
 
-    return { metadata: { ...data, slug }, content }
+
+    // return { metadata: { ...data, slug }, content }
+    return post
   } catch (error) {
     return null;
   }
@@ -43,6 +49,8 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 
 
 
+// to get all the post information 
+// which is to be shown on /posts URL
 export async function getPosts(limit?: number): Promise<PostMetadata[]> {
   const files = fs.readdirSync(rootDirectory)
 
@@ -62,6 +70,9 @@ export async function getPosts(limit?: number): Promise<PostMetadata[]> {
 
   return posts
 }
+
+
+
 
 export function getPostMetadata(filepath: string): PostMetadata {
   const slug = filepath.replace(/\.mdx$/, '')

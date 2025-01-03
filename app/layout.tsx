@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
-
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
 import { Inter, Playfair_Display } from 'next/font/google';
+import "./globals.css";
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -26,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           'flex min-h-screen flex-col antialiased',
