@@ -1,4 +1,4 @@
-import authorImage from '@/public/images/authors/suraj-b&w.jpg'
+import authorImage from '@/public/images/authors/suraj-new.jpg'
 import Image from 'next/image'
 
 export default function Intro() {
