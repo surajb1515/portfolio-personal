@@ -17,8 +17,8 @@ export default function Home() {
           <Intro />
 
 
-          <RecentPosts />
           <RecentProjects />
+          <RecentPosts />
         </div>
       </section>
     </>
