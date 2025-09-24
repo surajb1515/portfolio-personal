@@ -6,6 +6,8 @@ import { Suspense } from "react";
 import loading from "./loading";
 import LoadingChat from "./loading";
 import Education from "./education/page";
+import ContactPage from "./contact/page";
+import EducationComponent from "@/components/Education-Component";
 
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -18,10 +20,11 @@ export default async function Home() {
 
   return (
     <Suspense fallback={<LoadingChat />}>
-      <section className="pb-24 pt-40">
-        <div className="container max-w-3xl">
+      <section className="pb-24 pt-40 container max-w-3xl">
+        <div className=" max-w-3xl">
           <Intro />
-          <Education />
+          {/* <ContactPage /> */}
+          <EducationComponent />
           <RecentProjects />
           <RecentPosts />
         </div>
