@@ -7,10 +7,13 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import "./globals.css";
 
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter'
+});
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-serif'
+  // variable: '--font-serif'
 })
 
 
@@ -29,8 +32,8 @@ export default function RootLayout({
       <body
         className={cn(
           'flex min-h-screen flex-col antialiased',
-          inter.className,
-          playfair.variable
+          inter.variable,
+          playfair.className
         )}
       >
         <ThemeProvider

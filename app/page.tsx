@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { Suspense } from "react";
 import loading from "./loading";
 import LoadingChat from "./loading";
+import Education from "./education/page";
 
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -21,7 +22,7 @@ export default async function Home() {
         <div className="container max-w-3xl">
           <Intro />
 
-
+          <Education />
           <RecentProjects />
           <RecentPosts />
         </div>
