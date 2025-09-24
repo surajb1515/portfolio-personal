@@ -9,13 +9,13 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter'
-});
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  // variable: '--font-serif'
+  variable: '--font-inter',
 })
 
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+})
 
 export const metadata: Metadata = {
   title: "Suraj Portfolio ",
@@ -31,9 +31,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          'flex min-h-screen flex-col antialiased',
+          'flex min-h-screen flex-col antialiased font-sans',
           inter.variable,
-          playfair.className
+          playfair.variable
         )}
       >
         <ThemeProvider

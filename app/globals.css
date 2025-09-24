@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: var(--font-serif);
+}
+
+/* body {
+  @apply font-sans;
+} */
+
 @layer base {
   :root {
     --background: 0 0% 100%;

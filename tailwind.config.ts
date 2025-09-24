@@ -18,9 +18,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-        serif: ['var(--font-serif)', ...fontFamily.serif],
-        inter: ['var(--font-inter)', 'sans-serif']
+        sans: ['var(--font-inter)', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

@@ -2,7 +2,7 @@ export default function Education({ }: {}) {
   return (
     <section className='pb-24'>
       <div className='max-w-3xl'>
-        <h2 className='title mb-12'>Education</h2>
+        <h2 className='title mb-12 font-serif'>Education</h2>
 
         <div className=" space-y-8 font-inter">
           {/* College Education */}
