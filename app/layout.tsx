@@ -5,6 +5,9 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from 'next/font/google';
 import "./globals.css";
+import { ScreenSize } from "@/components/ScreenSize";
+import { Suspense } from "react";
+import { Spinner } from "@/components/Spinner";
 
 
 const inter = Inter({
@@ -43,8 +46,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="grow">{children}</main>
+          <main className="grow">
+            <Suspense fallback={<Spinner />}>
+              {children}
+            </Suspense>
+          </main>
           <Footer />
+          <ScreenSize />
         </ThemeProvider>
       </body>
     </html>
