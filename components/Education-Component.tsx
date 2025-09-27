@@ -7,7 +7,7 @@ export default function EducationComponent({ }: {}) {
 
 
   return (
-    <section className='pb-20 '>
+    <section className='pb-16'>
       <div className='max-w-3xl '>
         <h2 className='title mb-8 font-serif'>Education</h2>
 

@@ -84,10 +84,19 @@ export default async function PostPageSlug({
             </p>
           </header>
 
-          <main className='prose mt-16 dark:prose-invert'>
+
+
+          <main className='prose mt-16 dark:prose-invert '>
             <MDXContent source={content} />
             {/* <MDXContent source={content} components={components} /> */}
           </main>
+
+
+
+          {/* 
+          <main className='prose mt-16 dark:prose-invert border border-red-500'>
+            <MDXContent source={content} />
+          </main> */}
 
           {/* <footer className='mt-16'>
           <NewsletterForm />

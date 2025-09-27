@@ -1,0 +1,74 @@
+---
+title: Introduction to AWS EBS
+summary: Learn about Amazon Elastic Block Store (EBS), its use cases, types, pricing, and how it compares with Amazon S3.
+image: /images/posts/aws-ebs-introduction.png
+author: "Suraj Bhardwaj"
+publishedAt: "2025-09-27"
+---
+
+Amazon Elastic Block Store (EBS) is a high-performance block storage service offered by AWS. It is designed to be used with Amazon EC2 for both throughput and transaction-intensive workloads at any scale.
+
+## What is AWS EBS?
+
+AWS EBS (Elastic Block Store) provides **persistent block-level storage volumes** for use with Amazon EC2 instances. These volumes behave like raw, unformatted block devices, which you can format and mount as file systems.
+
+Each EBS volume is automatically replicated within its Availability Zone to protect from component failure, offering high availability and durability.
+
+## Why and When is AWS EBS Used?
+
+You would use AWS EBS when you need:
+
+- **Persistent storage** that survives instance termination (if the volume is not deleted)
+- **High performance and low latency** for mission-critical workloads
+- **File systems, databases, or applications** that require frequent read/write access
+- **Backup and restore** operations using EBS snapshots
+
+### Common Use Cases:
+
+- Hosting databases like MySQL, MongoDB, or PostgreSQL
+- Running enterprise applications (ERP, CRM)
+- Boot volumes for EC2 instances
+- Storing logs or application data with frequent updates
+
+## Types of AWS EBS Volumes
+
+EBS offers various volume types optimized for performance and cost:
+
+| Volume Type                    | Description                                   | Use Case                                   |
+| ------------------------------ | --------------------------------------------- | ------------------------------------------ |
+| gp3 (General Purpose SSD)      | Balanced price/performance for most workloads | Boot volumes, dev/test environments        |
+| io2 / io2 Block Express        | High-performance SSDs with high IOPS          | Critical databases, latency-sensitive apps |
+| st1 (Throughput Optimized HDD) | Low-cost HDD with high throughput             | Big data, data warehouses                  |
+| sc1 (Cold HDD)                 | Lowest cost HDD, infrequent access            | Archival, rarely accessed data             |
+
+## Cost of AWS EBS
+
+EBS pricing depends on:
+
+- **Volume type (gp3, io2, etc.)**
+- **Provisioned storage (GB per month)**
+- **Provisioned IOPS (for io2/io1)**
+- **Snapshot storage**
+- **Data transfer (between regions or AZs)**
+
+> 💡 Example: As of 2025, gp3 pricing starts around **$0.08 per GB-month** in the US East region.
+
+Check the [official AWS EBS pricing page](https://aws.amazon.com/ebs/pricing/) for current rates.
+
+## Difference Between Amazon S3 and EBS
+
+Here’s how EBS compares with S3:
+
+| Feature      | Amazon EBS                        | Amazon S3                           |
+| ------------ | --------------------------------- | ----------------------------------- |
+| Storage Type | Block storage                     | Object storage                      |
+| Attached To  | EC2 instances (as disks)          | Accessible via HTTP/S API           |
+| Persistence  | Persistent (survives EC2 restart) | Highly durable and persistent       |
+| Use Case     | File systems, databases, OS disks | Backup, media, logs, static assets  |
+| Performance  | Low-latency, high IOPS            | High durability, lower latency      |
+| Access       | Mounted to EC2                    | Accessible via SDK, API, or console |
+| Cost         | Higher per GB                     | Lower per GB                        |
+
+## Conclusion
+
+AWS EBS is a powerful and flexible block storage solution ideal for EC2 workloads that require persistent and high-performance storage. By understanding its types, pricing, and differences from services like S3, you can choose the right storage option for your applications on AWS.

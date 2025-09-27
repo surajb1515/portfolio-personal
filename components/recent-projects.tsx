@@ -11,7 +11,7 @@ export default async function () {
   const projects = await getProjects(2)
 
   return (
-    <section className='pb-24'>
+    <section className='pb-16'>
       <div>
         <h2 className='title mb-12'>Recent projects</h2>
         <ProjectsComponent projects={projects} />
