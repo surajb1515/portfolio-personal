@@ -52,7 +52,7 @@ export default function RootLayout({
             </Suspense>
           </main>
           <Footer />
-          <ScreenSize />
+          {/* <ScreenSize /> */}
         </ThemeProvider>
       </body>
     </html>
