@@ -56,7 +56,7 @@ export default async function PostPageSlug({
 
   return (
     <Suspense fallback={<Spinner />}>
-      <section className='pb-24 pt-32'>
+      <section className='pb-24 pt-20'>
         <div className='container max-w-3xl'>
           <Link
             href='/posts'

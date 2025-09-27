@@ -20,7 +20,7 @@ export default async function Home() {
 
   return (
     <Suspense fallback={<LoadingChat />}>
-      <section className="pb-24 pt-40 container max-w-3xl">
+      <section className="pb-24 pt-20 container max-w-3xl">
         <div className=" max-w-3xl">
           <Intro />
           {/* <ContactPage /> */}
