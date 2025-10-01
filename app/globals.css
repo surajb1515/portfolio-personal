@@ -38,6 +38,9 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
+    --selection: 0 0% 9%;
+    --selection-foreground: 0 0% 95%;
+
     --sh-identifier: #354150;
     --sh-keyword: #f47067;
     --sh-string: #00a99a;
@@ -75,6 +78,9 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
 
+    --selection: 0 0% 93%;
+    --selection-foreground: 0 0% 10%;
+
     --sh-class: #4c97f8;
     --sh-identifier: white;
     --sh-keyword: #f47067;
@@ -91,7 +97,7 @@ body {
   }
 
   .title {
-    @apply font-serif text-3xl font-bold underline decoration-border/75 decoration-2 underline-offset-8;
+    @apply font-serif text-primary text-3xl font-bold underline decoration-border/75 decoration-2 underline-offset-8;
   }
 
   .prose pre {
@@ -109,5 +115,9 @@ body {
 
   .prose code span {
     @apply font-medium;
+  }
+  ::selection {
+    background-color: hsl(var(--selection));
+    color: hsl(var(--selection-foreground));
   }
 }
