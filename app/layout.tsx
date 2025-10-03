@@ -44,7 +44,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="light"
           enableSystem
-          disableTransitionOnChange
+        // disableTransitionOnChange
         >
           <Navbar />
           <main className="grow">
@@ -55,6 +55,7 @@ export default function RootLayout({
           <Footer />
           <ModeToggle />
           {/* <ScreenSize /> */}
+
         </ThemeProvider>
       </body>
     </html>
