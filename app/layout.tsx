@@ -8,6 +8,7 @@ import "./globals.css";
 import { ScreenSize } from "@/components/ScreenSize";
 import { Suspense } from "react";
 import { Spinner } from "@/components/Spinner";
+import { ModeToggle } from "@/components/ModeToggle";
 
 
 const inter = Inter({
@@ -52,6 +53,7 @@ export default function RootLayout({
             </Suspense>
           </main>
           <Footer />
+          <ModeToggle />
           {/* <ScreenSize /> */}
         </ThemeProvider>
       </body>

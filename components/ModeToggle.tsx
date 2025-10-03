@@ -25,6 +25,7 @@ export function ModeToggle() {
 
   return (
     <Button
+      className="fixed bottom-5 right-5 bg-[#f5f4f3]"
       size='sm'
       variant='ghost'
       onClick={() => {
@@ -32,9 +33,9 @@ export function ModeToggle() {
       }}
     >
       {resolvedTheme === 'dark' ? (
-        <SunIcon className='size-4 text-orange-300' />
+        <SunIcon className='size-4 text-orange-300 ' />
       ) : (
-        <MoonIcon className='size-4 text-sky-950' />
+        <MoonIcon className='size-4 text-sky-950 ' />
       )}
 
       <span className='sr-only'>Toggle theme</span>

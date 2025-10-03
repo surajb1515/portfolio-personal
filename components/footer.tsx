@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { JSX, SVGProps } from 'react'
 
 const navigation = [
@@ -97,8 +98,8 @@ export default function Footer() {
           </div>
           <div className='mt-8 md:order-1 md:mt-0'>
             <p className='text-center text-xs leading-5 text-muted-foreground'>
-              &copy; {new Date().getFullYear()} Your Company. All rights
-              reserved.
+              Build with ❤️ by  &nbsp;
+              <Link href={'https://github.com/surajb1515'} className="font-semibold underline decoration-border/75 decoration-2 underline-offset-3  hover:font-semibold hover:text-primary">Suraj Bhardwaj</Link>
             </p>
           </div>
         </div>
