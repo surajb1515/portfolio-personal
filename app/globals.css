@@ -96,6 +96,18 @@ body {
     @apply bg-background text-foreground;
   }
 
+  /* Hide scrollbar globally */
+  html,
+  body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
   .title {
     @apply font-serif text-primary text-3xl font-bold underline decoration-border/75 decoration-2 underline-offset-8;
   }
